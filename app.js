@@ -15,11 +15,11 @@ const users = require('./routes/users');
 
 require('./config/passport')(passport);
 
-const db = require('./config/database');
+// const db = require('./config/database');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(db.mongoURI,{
+mongoose.connect('mongodb+srv://darkhorse:darkhorse@appjot-prod-p3tj9.mongodb.net/test?retryWrites=true',{
     useNewUrlParser : true
 })
 .then(() => console.log('MongoDB Connected .....'))
